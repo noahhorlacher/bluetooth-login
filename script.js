@@ -29,16 +29,16 @@ form.addEventListener('submit', async e=>{
 
     console.log('hashed', hashedPassword)
 
-    if(hashedPassword !== hash){
-        // clear password
-        form.querySelectorAll('input[type="password"]').forEach(el => el.value = null)
-        
-        // show error
-        error.classList.remove('hidden')
-    } else {
+    if(hashedPassword == hash && form.querySelector('input[type="text"]').value.toLowerCase() == 'binje'){
+        // success
         form.remove()
-
         error.remove()
         success.classList.remove('hidden')
+    } else {
+        // clear password
+        form.querySelectorAll('input[type="password"]').forEach(el => el.value = null)
+            
+        // show error
+        error.classList.remove('hidden')
     }
 })
