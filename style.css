@@ -225,3 +225,8 @@ p {
     color: #d51111;
     font-size: 1.1rem;
 }
+
+.success {
+  color: #11d55c;
+  font-size: 1.1rem;
+}
